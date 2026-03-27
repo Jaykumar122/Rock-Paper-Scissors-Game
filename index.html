@@ -1,26 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors Game</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock · Paper · Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Rock Paper Scissors</h1>
-        <div class="buttons">
-            <button class="choice" data-choice="rock">Rock</button>
-            <button class="choice" data-choice="paper">Paper</button>
-            <button class="choice" data-choice="scissors">Scissors</button>
-        </div>
-        <div class="result">
-            <p id="userChoice">Your Choice: </p>
-            <p id="computerChoice">Computer's Choice: </p>
-            <p id="winner">Winner: </p>
-            <button id="playAgain">Play Again</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
+
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+
+  <main class="wrapper">
+
+    <header class="header">
+      <div class="header-tag">GAME</div>
+      <h1>Rock<span class="dot">·</span>Paper<span class="dot">·</span>Scissors</h1>
+    </header>
+
+    <!-- Score Board -->
+    <section class="scoreboard">
+      <div class="score-cell">
+        <span class="score-val" id="s-you">0</span>
+        <span class="score-lbl">You</span>
+      </div>
+      <div class="score-divider">
+        <span id="round-count">Round 0</span>
+      </div>
+      <div class="score-cell">
+        <span class="score-val" id="s-cpu">0</span>
+        <span class="score-lbl">CPU</span>
+      </div>
+    </section>
+
+    <!-- Arena -->
+    <section class="arena">
+      <div class="arena-player" id="arena-you">
+        <div class="arena-icon" id="icon-you">?</div>
+        <span class="arena-name">You</span>
+      </div>
+      <div class="arena-vs">VS</div>
+      <div class="arena-player" id="arena-cpu">
+        <div class="arena-icon" id="icon-cpu">?</div>
+        <span class="arena-name">CPU</span>
+      </div>
+    </section>
+
+    <!-- Result Banner -->
+    <div class="result-banner" id="result-banner" aria-live="polite"></div>
+
+    <!-- Choice Buttons -->
+    <section class="choices" id="choices">
+      <button class="choice-btn" data-choice="rock" aria-label="Rock">
+        <span class="choice-emoji">🪨</span>
+        <span class="choice-name">Rock</span>
+      </button>
+      <button class="choice-btn" data-choice="paper" aria-label="Paper">
+        <span class="choice-emoji">📄</span>
+        <span class="choice-name">Paper</span>
+      </button>
+      <button class="choice-btn" data-choice="scissors" aria-label="Scissors">
+        <span class="choice-emoji">✂️</span>
+        <span class="choice-name">Scissors</span>
+      </button>
+    </section>
+
+    <!-- Play Again -->
+    <button class="play-again" id="play-again">↺ Play Again</button>
+
+    <!-- History -->
+    <section class="history">
+      <p class="history-label">Round history</p>
+      <div class="history-dots" id="history-dots"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
