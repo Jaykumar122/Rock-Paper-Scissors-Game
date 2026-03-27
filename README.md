@@ -72,7 +72,7 @@ index.html
 
 ## 🌐 Live Demo
 
-👉 https://your-username.github.io/Rock-Paper-Scissors/
+👉 https://jaykumar122.github.io/Rock-Paper-Scissors-Game/
 
 ---
 
