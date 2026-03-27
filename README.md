@@ -57,7 +57,7 @@ Rock-Paper-Scissors/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/Rock-Paper-Scissors.git
+https://github.com/Jaykumar122/Rock-Paper-Scissors-Game.git
 ```
 
 2. Open the folder
